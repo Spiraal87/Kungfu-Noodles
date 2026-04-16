@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-bg:       #0d0d0d;
+  --brand-bg-warm:  #1a0a0a;
+  --brand-bg-alt:   #1a1a1a;
+  --brand-red:      #cc2200;
+  --brand-gold:     #c9843a;
+  --brand-text:     #f5efe6;
+  --brand-muted:    #a89888;
+  --brand-border:   #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5efe6;
+  font-family: var(--font-inter), Inter, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #cc2200;
+  color: #f5efe6;
+  padding: 8px 16px;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #cc2200; border-radius: 3px; }
+
+.noodle-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #cc2200 #1a1a1a;
+}
+.noodle-scroll::-webkit-scrollbar { height: 4px; }
+.noodle-scroll::-webkit-scrollbar-thumb { background: #cc2200; border-radius: 2px; }
+
+.tab-scroll { scrollbar-width: none; }
+.tab-scroll::-webkit-scrollbar { display: none; }
+
+:focus-visible {
+  outline: 2px solid #cc2200;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
