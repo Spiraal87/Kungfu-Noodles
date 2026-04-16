@@ -1,7 +1,3 @@
 {
-  "buildCommand": "cd kungfu-noodles-site && npm run build",
-  "installCommand": "cd kungfu-noodles-site && npm install",
-  "outputDirectory": "kungfu-noodles-site/.next",
-  "devCommand": "cd kungfu-noodles-site && npm run dev",
-  "framework": "nextjs"
+  "root": "kungfu-noodles-site"
 }
