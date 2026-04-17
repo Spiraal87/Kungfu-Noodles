@@ -92,10 +92,10 @@ export default function HandPulledNoodles() {
             className="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a]"
           >
             <Image
-              src="/images/chef-pulling-noodles-placeholder.png"
+              src="/images/noodle-handpull.jpg"
               alt="Chef hand-pulling lamian noodles at Kungfu Noodles Tempe AZ"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             {/* Red accent border */}
@@ -154,7 +154,7 @@ export default function HandPulledNoodles() {
           </motion.h3>
 
           <div
-            className="flex gap-4 overflow-x-auto pb-4 noodle-scroll"
+            className="flex gap-4 overflow-x-auto overflow-y-hidden pb-4 noodle-scroll"
             role="list"
             aria-label="Seven noodle styles available"
           >

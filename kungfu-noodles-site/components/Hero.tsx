@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 28 },
@@ -10,55 +11,58 @@ const fadeUp = (delay: number) => ({
 });
 
 export default function Hero() {
+  const ref = useRef(null);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, 100]);
+
   return (
     <section
+      ref={ref}
       id="home"
       className="relative min-h-dvh flex flex-col items-center justify-center overflow-hidden bg-[#1a0a0a]"
       aria-label="Kungfu Noodles — Every Bowl a Master's Touch"
     >
+      {/* Hero background image */}
+      <Image
+        src="/images/spicy-beef-noodle.jpeg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        aria-hidden="true"
+      />
+
+      {/* Dark overlay with gradient fade */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{ background: "linear-gradient(180deg, rgba(10,4,4,0.72) 0%, rgba(0,0,0,0.85) 100%)" }}
+      />
+
       {/* Red gradient from bottom */}
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(ellipse 120% 60% at 50% 110%, rgba(204,34,0,0.22) 0%, transparent 70%), radial-gradient(ellipse 80% 40% at 50% 100%, rgba(204,34,0,0.12) 0%, transparent 60%)",
+            "radial-gradient(ellipse 120% 60% at 50% 110%, rgba(204,34,0,0.28) 0%, transparent 70%), radial-gradient(ellipse 80% 40% at 50% 100%, rgba(204,34,0,0.16) 0%, transparent 60%)",
         }}
       />
 
-      {/* Chinese watermark characters */}
-      <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
-        aria-hidden="true"
-      >
-        <span
-          className="font-serif font-black text-[22vw] leading-none text-[#cc2200] opacity-[0.06] tracking-tight"
-          lang="zh"
-        >
-          功夫小面
-        </span>
-      </div>
-
-      {/* Dragon decoration — top right */}
-      <div
-        className="absolute top-20 right-4 sm:right-8 lg:right-16 pointer-events-none select-none"
-        aria-hidden="true"
-      >
-        <span className="text-[#cc2200] opacity-10 text-6xl sm:text-8xl font-serif">龍</span>
-      </div>
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-24 pb-16 max-w-4xl mx-auto">
         {/* Bowl logo mark */}
         <motion.div
           {...fadeUp(0)}
-          className="mb-8"
+          style={{ y }}
+          className="mb-8 rounded-full overflow-hidden"
         >
           <Image
-            src="/images/kungfu-noodles-logo.png"
-            alt="Kungfu Noodles logo — bowl with chopsticks and star"
-            width={140}
-            height={140}
+            src="/images/kungfu-noodle-logo.jpg"
+            alt="Kungfu Noodles logo"
+            width={260}
+            height={260}
             priority
             className="drop-shadow-lg"
           />
@@ -107,18 +111,13 @@ export default function Hero() {
           className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-[#a89888]"
         >
           <span className="flex items-center gap-1">
-            <span className="text-[#c9843a]" aria-hidden="true">★</span>
-            <span>Featured by Phoenix New Times</span>
+            <span className="text-[#c9843a]" aria-hidden="true">★★★★★</span>
+            <span>4.6 on Google</span>
           </span>
-          <span className="text-[#2a2a2a]" aria-hidden="true">|</span>
-          <span className="flex items-center gap-1">
-            <span className="text-[#c9843a]" aria-hidden="true">★</span>
-            <span>Eater Phoenix</span>
-          </span>
-          <span className="text-[#2a2a2a]" aria-hidden="true">|</span>
-          <span>4.5 Stars</span>
-          <span className="text-[#2a2a2a]" aria-hidden="true">|</span>
-          <span>10K+ Instagram Followers</span>
+          <span className="text-[#444]" aria-hidden="true">|</span>
+          <span>1,000+ Reviews</span>
+          <span className="text-[#444]" aria-hidden="true">|</span>
+          <span>Two Valley Locations</span>
         </motion.div>
       </div>
 
@@ -131,11 +130,23 @@ export default function Hero() {
         aria-hidden="true"
       >
         <span className="text-[#a89888] text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div
+        <motion.svg
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="w-px h-8 bg-gradient-to-b from-[#cc2200] to-transparent"
-        />
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 7.5L10 12.5L15 7.5"
+            stroke="#cc2200"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </motion.svg>
       </motion.div>
     </section>
   );

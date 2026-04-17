@@ -53,11 +53,11 @@ export default function Navigation() {
           aria-label="Kungfu Noodles — home"
         >
           <Image
-            src="/images/kungfu-noodles-logo.png"
+            src="/images/kungfu-noodle-logo.jpg"
             alt=""
             width={40}
             height={40}
-            className="group-hover:drop-shadow-lg transition-all duration-200"
+            className="rounded-full group-hover:drop-shadow-lg transition-all duration-200"
           />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-lg text-[#f5efe6] tracking-wide group-hover:text-[#cc2200] transition-colors duration-200">

@@ -24,7 +24,7 @@ export default function About() {
           className="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] order-2 lg:order-1"
         >
           <Image
-            src="/images/kitchen-action-placeholder.png"
+            src="/images/masters-of-flavor.jpeg"
             alt="Kitchen action at Kungfu Noodles"
             fill
             className="object-cover"
