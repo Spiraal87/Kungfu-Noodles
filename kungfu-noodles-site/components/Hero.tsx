@@ -56,16 +56,25 @@ export default function Hero() {
         <motion.div
           {...fadeUp(0)}
           style={{ y }}
-          className="mb-8 w-fit"
+          className="mb-8"
         >
-          <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden">
+          <div
+            className="flex items-center justify-center"
+            style={{
+              width: '224px',
+              height: '224px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+            }}
+          >
             <Image
               src="/images/kungfu-noodle-logo.jpg"
               alt="Kungfu Noodles logo"
               width={260}
               height={260}
               priority
-              className="drop-shadow-lg w-full h-full object-cover"
+              className="drop-shadow-lg"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
         </motion.div>
