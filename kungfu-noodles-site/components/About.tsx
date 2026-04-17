@@ -21,7 +21,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65 }}
-          className="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] order-2 lg:order-1"
+          className="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] order-1 lg:order-1"
         >
           <Image
             src="/images/masters-of-flavor.jpeg"
@@ -34,7 +34,7 @@ export default function About() {
         </motion.div>
 
         {/* Right: copy */}
-        <div ref={ref} className="order-1 lg:order-2">
+        <div ref={ref} className="order-2 lg:order-2">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
