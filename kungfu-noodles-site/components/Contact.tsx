@@ -61,7 +61,7 @@ export default function Contact() {
               Get in Touch
             </h2>
             <p className="text-brand-muted text-lg mb-10">
-              Have questions? Want to reserve a table? Reach out and we'll get back to you soon.
+              Have questions? Want to reserve a table? Reach out and we&apos;ll get back to you soon.
             </p>
 
             <div className="space-y-8">
@@ -170,7 +170,7 @@ export default function Contact() {
               {/* Status Messages */}
               {status === 'success' && (
                 <div className="bg-green-900/20 border border-green-700/30 text-green-300 px-4 py-3 rounded text-sm">
-                  Message sent successfully! We'll be in touch soon.
+                  Message sent successfully! We&apos;ll be in touch soon.
                 </div>
               )}
 
