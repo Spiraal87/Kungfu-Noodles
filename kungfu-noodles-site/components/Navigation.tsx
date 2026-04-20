@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Locations",  href: "#locations" },
   { label: "Food Truck", href: "#food-truck" },
   { label: "FAQ",        href: "#faq" },
+  { label: "Contact Us", href: "#contact" },
   { label: "Order Online",href: "https://pos.chowbus.com/online-ordering/store/21094", external: true },
 ];
 

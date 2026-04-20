@@ -11,6 +11,7 @@ import FoodTruck from "@/components/FoodTruck";
 import Instagram from "@/components/Instagram";
 import FAQ from "@/components/FAQ";
 import Locations from "@/components/Locations";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
@@ -37,6 +38,7 @@ export default function HomePage() {
         <Instagram />
         <FAQ />
         <Locations />
+        <Contact />
       </main>
 
       <Footer />
