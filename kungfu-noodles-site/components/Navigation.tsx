@@ -54,7 +54,7 @@ export default function Navigation() {
           aria-label="Kungfu Noodles — home"
         >
           <Image
-            src="/images/kungfu-noodle-logo.jpg"
+            src="/images/kungfu-noodle-logo-circle.png"
             alt=""
             width={40}
             height={40}

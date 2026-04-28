@@ -63,12 +63,10 @@ export default function Hero() {
             style={{
               width: '224px',
               height: '224px',
-              borderRadius: '50%',
-              overflow: 'hidden',
             }}
           >
             <Image
-              src="/images/kungfu-noodle-logo.jpg"
+              src="/images/kungfu-noodle-logo-circle.png"
               alt="Kungfu Noodles logo"
               width={260}
               height={260}
