@@ -1,5 +1,7 @@
 # Kungfu Noodles Website
 
+Built for a local restaurant as a complete redesign and modernization of their web presence.
+
 Marketing website for Kungfu Noodles, a hand-pulled lamian restaurant with Tempe and Chandler locations in Arizona. The site is built with Next.js and presents the brand story, hero messaging, full menu, reviews, food truck information, FAQs, location details, and contact options in a single long-form landing page.
 
 ## Project Snapshot
