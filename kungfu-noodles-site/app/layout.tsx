@@ -83,10 +83,7 @@ const localBusinessTempe = {
     "Hand-pulled lamian noodle house near Arizona State University. Seven noodle styles made fresh daily. Authentic Chinese cuisine including dumplings, Xiao Long Bao, and boba.",
   url: siteUrl,
   telephone: "+14802687331",
-  priceRange: "$",
   servesCuisine: ["Chinese", "Noodles", "Dumplings"],
-  currenciesAccepted: "USD",
-  paymentAccepted: "Cash, Credit Card",
   address: {
     "@type": "PostalAddress",
     streetAddress: "1845 E Broadway Rd Unit 127",
@@ -117,11 +114,6 @@ const localBusinessTempe = {
   sameAs: [
     "https://www.instagram.com/kungfuarizona/",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.5",
-    reviewCount: "200",
-  },
   image: `${siteUrl}/og-image.jpg`,
 };
 
@@ -135,7 +127,6 @@ const localBusinessChandler = {
     "Hand-pulled lamian noodle house in Chandler, AZ. Authentic Chinese cuisine including seven noodle styles, dumplings, Xiao Long Bao, and boba.",
   url: siteUrl,
   telephone: "+14802928142",
-  priceRange: "$",
   servesCuisine: ["Chinese", "Noodles", "Dumplings"],
   address: {
     "@type": "PostalAddress",
@@ -167,6 +158,7 @@ const localBusinessChandler = {
   sameAs: [
     "https://www.instagram.com/kungfuarizona/",
   ],
+  image: `${siteUrl}/og-image.jpg`,
 };
 
 const faqSchema = {
